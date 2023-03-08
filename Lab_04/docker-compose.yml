@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+  plpython_postgres:
+    build: .
+    container_name: plpython_postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PG_PASSWORD: postgres
+      POSTGRES_DB: agency
+    volumes:
+      - C:/Uni/5sem/Data base/Lab_01:/data/csv
+    ports:
+      - "5431:5432"
